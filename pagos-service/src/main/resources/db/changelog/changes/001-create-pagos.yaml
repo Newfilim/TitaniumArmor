@@ -1,0 +1,41 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 1
+      author: cristopher
+
+      changes:
+
+        - createTable:
+            tableName: pagos
+
+            columns:
+
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: venta_id
+                  type: BIGINT
+
+              - column:
+                  name: monto
+                  type: DOUBLE
+
+              - column:
+                  name: metodo_pago
+                  type: VARCHAR(100)
+
+              - column:
+                  name: estado
+                  type: VARCHAR(100)
+
+              - column:
+                  name: fecha
+                  type: DATETIME

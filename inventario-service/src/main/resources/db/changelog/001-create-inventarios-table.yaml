@@ -1,0 +1,112 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: titanium
+      changes:
+        - createTable:
+            tableName: inventarios
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: producto_id
+                  type: BIGINT
+              - column:
+                  name: stock
+                  type: INT
+              - column:
+                  name: stock_minimo
+                  type: INT
+              - column:
+                  name: ubicacion
+                  type: VARCHAR(100)
+
+  - changeSet:
+      id: 2
+      author: titanium
+      changes:
+        # 1. Zapatillas Nike
+        - insert:
+            tableName: inventarios
+            columns:
+              - column: { name: producto_id, valueNumeric: 1 }
+              - column: { name: stock, valueNumeric: 50 }
+              - column: { name: stock_minimo, valueNumeric: 10 }
+              - column: { name: ubicacion, value: "Pasillo A - Calzado" }
+        # 2. Camiseta Adidas
+        - insert:
+            tableName: inventarios
+            columns:
+              - column: { name: producto_id, valueNumeric: 2 }
+              - column: { name: stock, valueNumeric: 100 }
+              - column: { name: stock_minimo, valueNumeric: 20 }
+              - column: { name: ubicacion, value: "Pasillo A - Ropa" }
+        # 3. Mochila Puma
+        - insert:
+            tableName: inventarios
+            columns:
+              - column: { name: producto_id, valueNumeric: 3 }
+              - column: { name: stock, valueNumeric: 30 }
+              - column: { name: stock_minimo, valueNumeric: 5 }
+              - column: { name: ubicacion, value: "Pasillo B - Accesorios" }
+        # 4. Reloj Garmin
+        - insert:
+            tableName: inventarios
+            columns:
+              - column: { name: producto_id, valueNumeric: 4 }
+              - column: { name: stock, valueNumeric: 15 }
+              - column: { name: stock_minimo, valueNumeric: 2 }
+              - column: { name: ubicacion, value: "Vitrina Tecnología" }
+        # 5. Balón Nike
+        - insert:
+            tableName: inventarios
+            columns:
+              - column: { name: producto_id, valueNumeric: 5 }
+              - column: { name: stock, valueNumeric: 80 }
+              - column: { name: stock_minimo, valueNumeric: 15 }
+              - column: { name: ubicacion, value: "Pasillo B - Deportes" }
+        # 6. Mat Yoga
+        - insert:
+            tableName: inventarios
+            columns:
+              - column: { name: producto_id, valueNumeric: 6 }
+              - column: { name: stock, valueNumeric: 40 }
+              - column: { name: stock_minimo, valueNumeric: 10 }
+              - column: { name: ubicacion, value: "Pasillo B - Yoga" }
+        # 7. Casco Specialized
+        - insert:
+            tableName: inventarios
+            columns:
+              - column: { name: producto_id, valueNumeric: 7 }
+              - column: { name: stock, valueNumeric: 12 }
+              - column: { name: stock_minimo, valueNumeric: 3 }
+              - column: { name: ubicacion, value: "Pasillo B - Ciclismo" }
+        # 8. Antiparras Speedo
+        - insert:
+            tableName: inventarios
+            columns:
+              - column: { name: producto_id, valueNumeric: 8 }
+              - column: { name: stock, valueNumeric: 25 }
+              - column: { name: stock_minimo, valueNumeric: 5 }
+              - column: { name: ubicacion, value: "Pasillo B - Natación" }
+        # 9. Raqueta Babolat
+        - insert:
+            tableName: inventarios
+            columns:
+              - column: { name: producto_id, valueNumeric: 9 }
+              - column: { name: stock, valueNumeric: 10 }
+              - column: { name: stock_minimo, valueNumeric: 2 }
+              - column: { name: ubicacion, value: "Pasillo B - Tenis" }
+        # 10. Proteína Whey
+        - insert:
+            tableName: inventarios
+            columns:
+              - column: { name: producto_id, valueNumeric: 10 }
+              - column: { name: stock, valueNumeric: 60 }
+              - column: { name: stock_minimo, valueNumeric: 10 }
+              - column: { name: ubicacion, value: "Pasillo B - Suplementos" }

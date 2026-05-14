@@ -1,0 +1,80 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 1
+      author: cristopher
+
+      changes:
+
+        - createTable:
+            tableName: ventas
+
+            columns:
+
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: usuario_id
+                  type: BIGINT
+
+              - column:
+                  name: fecha
+                  type: DATETIME
+
+              - column:
+                  name: total
+                  type: DOUBLE
+
+              - column:
+                  name: estado
+                  type: VARCHAR(100)
+
+        - createTable:
+            tableName: detalle_ventas
+
+            columns:
+
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: producto_id
+                  type: BIGINT
+
+              - column:
+                  name: cantidad
+                  type: INT
+
+              - column:
+                  name: precio
+                  type: DOUBLE
+
+              - column:
+                  name: subtotal
+                  type: DOUBLE
+
+              - column:
+                  name: venta_id
+                  type: BIGINT
+
+        - addForeignKeyConstraint:
+            baseTableName: detalle_ventas
+            baseColumnNames: venta_id
+
+            referencedTableName: ventas
+            referencedColumnNames: id
+
+            constraintName: fk_detalle_venta

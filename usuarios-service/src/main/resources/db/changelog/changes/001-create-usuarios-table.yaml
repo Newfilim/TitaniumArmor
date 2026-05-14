@@ -1,0 +1,158 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 1
+      author: titanium
+
+      changes:
+
+        - createTable:
+            tableName: usuarios
+
+            columns:
+
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: nombre
+                  type: VARCHAR(100)
+
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: email
+                  type: VARCHAR(100)
+
+                  constraints:
+                    nullable: false
+                    unique: true
+
+              - column:
+                  name: password
+                  type: VARCHAR(100)
+
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: direccion
+                  type: VARCHAR(255)
+
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 2
+      author: titanium
+
+      changes:
+
+        - insert:
+            tableName: usuarios
+            columns:
+              - column:
+                  name: nombre
+                  value: "Cristopher Guerra"
+              - column:
+                  name: email
+                  value: "cris@gmail.com"
+              - column:
+                  name: password
+                  value: "1234"
+              - column:
+                  name: direccion
+                  value: "Santiago Centro"
+
+        - insert:
+            tableName: usuarios
+            columns:
+              - column:
+                  name: nombre
+                  value: "Juan Perez"
+              - column:
+                  name: email
+                  value: "juan@gmail.com"
+              - column:
+                  name: password
+                  value: "1234"
+              - column:
+                  name: direccion
+                  value: "Maipu"
+
+  - changeSet:
+      id: 3
+      author: titanium
+
+      changes:
+
+        - insert:
+            tableName: usuarios
+            columns:
+              - column:
+                  name: nombre
+                  value: "Pablo Apablaza"
+              - column:
+                  name: email
+                  value: "pa.apa@gmail.com"
+              - column:
+                  name: password
+                  value: "3333"
+              - column:
+                  name: direccion
+                  value: "Nogales"
+
+        - insert:
+            tableName: usuarios
+            columns:
+              - column:
+                  name: nombre
+                  value: "Ana Jimenez"
+              - column:
+                  name: email
+                  value: "an.jim@gmail.com"
+              - column:
+                  name: password
+                  value: "2222"
+              - column:
+                  name: direccion
+                  value: "Maipu"
+
+        - insert:
+            tableName: usuarios
+            columns:
+              - column:
+                  name: nombre
+                  value: "Pedro Pablo"
+              - column:
+                  name: email
+                  value: "pe.pam@gmail.com"
+              - column:
+                  name: password
+                  value: "2222"
+              - column:
+                  name: direccion
+                  value: "Providencia"
+
+        - insert:
+            tableName: usuarios
+            columns:
+              - column:
+                  name: nombre
+                  value: "Juan Garcia"
+              - column:
+                  name: email
+                  value: "ju.gam@gmail.com"
+              - column:
+                  name: password
+                  value: "3123"
+              - column:
+                  name: direccion
+                  value: "Ñuñoa"

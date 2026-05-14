@@ -1,0 +1,28 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 1
+      author: cristopher
+
+      changes:
+
+        - createTable:
+            tableName: categorias
+
+            columns:
+
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+              - column:
+                  name: nombre
+                  type: VARCHAR(100)
+
+                  constraints:
+                    nullable: false

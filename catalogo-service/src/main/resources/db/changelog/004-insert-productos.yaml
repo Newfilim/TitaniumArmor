@@ -1,0 +1,104 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: cristopher
+      changes:
+        # 1. Calzado Deportivo
+        - insert:
+            tableName: productos
+            columns:
+              - column: { name: nombre, value: "Zapatillas Nike Pegasus" }
+              - column: { name: descripcion, value: "Zapatillas para running amortiguación premium" }
+              - column: { name: precio, valueNumeric: 89990 }
+              - column: { name: marca, value: "Nike" }
+              - column: { name: categoria_id, valueNumeric: 1 }
+
+        # 2. Ropa de Entrenamiento
+        - insert:
+            tableName: productos
+            columns:
+              - column: { name: nombre, value: "Camiseta Adidas Drifit" }
+              - column: { name: descripcion, value: "Polera transpirable para alta intensidad" }
+              - column: { name: precio, valueNumeric: 24990 }
+              - column: { name: marca, value: "Adidas" }
+              - column: { name: categoria_id, valueNumeric: 2 }
+
+        # 3. Accesorios y Bolsos
+        - insert:
+            tableName: productos
+            columns:
+              - column: { name: nombre, value: "Mochila Training Puma" }
+              - column: { name: descripcion, value: "Mochila con compartimento para calzado" }
+              - column: { name: precio, valueNumeric: 34990 }
+              - column: { name: marca, value: "Puma" }
+              - column: { name: categoria_id, valueNumeric: 3 }
+
+        # 4. Running y Maratón
+        - insert:
+            tableName: productos
+            columns:
+              - column: { name: nombre, value: "Reloj Garmin Forerunner" }
+              - column: { name: descripcion, value: "Reloj GPS con monitor de frecuencia cardíaca" }
+              - column: { name: precio, valueNumeric: 199990 }
+              - column: { name: marca, value: "Garmin" }
+              - column: { name: categoria_id, valueNumeric: 4 }
+
+        # 5. Fútbol y Deportes Colectivos
+        - insert:
+            tableName: productos
+            columns:
+              - column: { name: nombre, value: "Balón Nike Academy" }
+              - column: { name: descripcion, value: "Balón de fútbol profesional FIFA Basic" }
+              - column: { name: precio, valueNumeric: 19990 }
+              - column: { name: marca, value: "Nike" }
+              - column: { name: categoria_id, valueNumeric: 5 }
+
+        # 6. Yoga y Pilates
+        - insert:
+            tableName: productos
+            columns:
+              - column: { name: nombre, value: "Mat de Yoga Reebock" }
+              - column: { name: descripcion, value: "Mat antideslizante de 4mm" }
+              - column: { name: precio, valueNumeric: 15990 }
+              - column: { name: marca, value: "Reebok" }
+              - column: { name: categoria_id, valueNumeric: 6 }
+
+        # 7. Ciclismo
+        - insert:
+            tableName: productos
+            columns:
+              - column: { name: nombre, value: "Casco Specialized Align" }
+              - column: { name: descripcion, value: "Casco de alta seguridad con sistema MIPS" }
+              - column: { name: precio, valueNumeric: 45990 }
+              - column: { name: marca, value: "Specialized" }
+              - column: { name: categoria_id, valueNumeric: 7 }
+
+        # 8. Natación
+        - insert:
+            tableName: productos
+            columns:
+              - column: { name: nombre, value: "Antiparras Speedo Biofuse" }
+              - column: { name: descripcion, value: "Lentes de natación con protección UV" }
+              - column: { name: precio, valueNumeric: 12990 }
+              - column: { name: marca, value: "Speedo" }
+              - column: { name: categoria_id, valueNumeric: 8 }
+
+        # 9. Tenis y Padel
+        - insert:
+            tableName: productos
+            columns:
+              - column: { name: nombre, value: "Raqueta Babolat Pure Drive" }
+              - column: { name: descripcion, value: "Raqueta de potencia para nivel intermedio" }
+              - column: { name: precio, valueNumeric: 169990 }
+              - column: { name: marca, value: "Babolat" }
+              - column: { name: categoria_id, valueNumeric: 9 }
+
+        # 10. Suplementos Deportivos
+        - insert:
+            tableName: productos
+            columns:
+              - column: { name: nombre, value: "Proteína Whey Gold Standard" }
+              - column: { name: descripcion, value: "Suplemento proteico 2lbs vainilla" }
+              - column: { name: precio, valueNumeric: 39990 }
+              - column: { name: marca, value: "ON" }
+              - column: { name: categoria_id, valueNumeric: 10 }

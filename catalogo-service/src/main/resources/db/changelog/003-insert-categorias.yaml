@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: cristopher
+      changes:
+        - insert:
+            tableName: categorias
+            columns:
+              - column: { name: nombre, value: "Calzado Deportivo" }
+        - insert:
+            tableName: categorias
+            columns:
+              - column: { name: nombre, value: "Ropa de Entrenamiento" }
+        - insert:
+            tableName: categorias
+            columns:
+              - column: { name: nombre, value: "Accesorios y Bolsos" }
+        - insert:
+            tableName: categorias
+            columns:
+              - column: { name: nombre, value: "Running y Maratón" }
+        - insert:
+            tableName: categorias
+            columns:
+              - column: { name: nombre, value: "Fútbol y Deportes Colectivos" }
+        - insert:
+            tableName: categorias
+            columns:
+              - column: { name: nombre, value: "Yoga y Pilates" }
+        - insert:
+            tableName: categorias
+            columns:
+              - column: { name: nombre, value: "Ciclismo" }
+        - insert:
+            tableName: categorias
+            columns:
+              - column: { name: nombre, value: "Natación" }
+        - insert:
+            tableName: categorias
+            columns:
+              - column: { name: nombre, value: "Tenis y Padel" }
+        - insert:
+            tableName: categorias
+            columns:
+              - column: { name: nombre, value: "Suplementos Deportivos" }

@@ -1,0 +1,95 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: cristopher
+      changes:
+        # Pago 1 - Venta 1 (Zapatillas Nike)
+        - insert:
+            tableName: pagos
+            columns:
+              - column: { name: venta_id, valueNumeric: 1 }
+              - column: { name: monto, valueNumeric: 89990 }
+              - column: { name: metodo_pago, value: "TARJETA" }
+              - column: { name: estado, value: "APROBADO" }
+              - column: { name: fecha, valueDate: 2026-05-01T10:05:00 }
+        # Pago 2 - Venta 2 (Camiseta Adidas)
+        - insert:
+            tableName: pagos
+            columns:
+              - column: { name: venta_id, valueNumeric: 2 }
+              - column: { name: monto, valueNumeric: 24990 }
+              - column: { name: metodo_pago, value: "TRANSFERENCIA" }
+              - column: { name: estado, value: "APROBADO" }
+              - column: { name: fecha, valueDate: 2026-05-02T11:10:00 }
+        # Pago 3 - Venta 3 (Reloj Garmin - Intento fallido)
+        - insert:
+            tableName: pagos
+            columns:
+              - column: { name: venta_id, valueNumeric: 3 }
+              - column: { name: monto, valueNumeric: 199990 }
+              - column: { name: metodo_pago, value: "TARJETA" }
+              - column: { name: estado, value: "RECHAZADO" }
+              - column: { name: fecha, valueDate: 2026-05-03T12:05:00 }
+        # Pago 4 - Venta 4 (Balón Nike)
+        - insert:
+            tableName: pagos
+            columns:
+              - column: { name: venta_id, valueNumeric: 4 }
+              - column: { name: monto, valueNumeric: 19990 }
+              - column: { name: metodo_pago, value: "EFECTIVO" }
+              - column: { name: estado, value: "APROBADO" }
+              - column: { name: fecha, valueDate: 2026-05-04T13:15:00 }
+        # Pago 5 - Venta 5 (Mochila Puma - Pendiente)
+        - insert:
+            tableName: pagos
+            columns:
+              - column: { name: venta_id, valueNumeric: 5 }
+              - column: { name: monto, valueNumeric: 34990 }
+              - column: { name: metodo_pago, value: "TRANSFERENCIA" }
+              - column: { name: estado, value: "PENDIENTE" }
+              - column: { name: fecha, valueDate: 2026-05-05T14:20:00 }
+        # Pago 6 - Venta 6 (Mat Yoga)
+        - insert:
+            tableName: pagos
+            columns:
+              - column: { name: venta_id, valueNumeric: 6 }
+              - column: { name: monto, valueNumeric: 15990 }
+              - column: { name: metodo_pago, value: "TARJETA" }
+              - column: { name: estado, value: "APROBADO" }
+              - column: { name: fecha, valueDate: 2026-05-06T09:15:00 }
+        # Pago 7 - Venta 7 (Casco Specialized)
+        - insert:
+            tableName: pagos
+            columns:
+              - column: { name: venta_id, valueNumeric: 7 }
+              - column: { name: monto, valueNumeric: 45990 }
+              - column: { name: metodo_pago, value: "TRANSFERENCIA" }
+              - column: { name: estado, value: "APROBADO" }
+              - column: { name: fecha, valueDate: 2026-05-07T15:45:00 }
+        # Pago 8 - Venta 8 (Antiparras)
+        - insert:
+            tableName: pagos
+            columns:
+              - column: { name: venta_id, valueNumeric: 8 }
+              - column: { name: monto, valueNumeric: 12990 }
+              - column: { name: metodo_pago, value: "EFECTIVO" }
+              - column: { name: estado, value: "APROBADO" }
+              - column: { name: fecha, valueDate: 2026-05-08T18:10:00 }
+        # Pago 9 - Venta 9 (Raqueta - Intento fallido)
+        - insert:
+            tableName: pagos
+            columns:
+              - column: { name: venta_id, valueNumeric: 9 }
+              - column: { name: monto, valueNumeric: 169990 }
+              - column: { name: metodo_pago, value: "TARJETA" }
+              - column: { name: estado, value: "RECHAZADO" }
+              - column: { name: fecha, valueDate: 2026-05-09T10:30:00 }
+        # Pago 10 - Venta 10 (Proteína Whey)
+        - insert:
+            tableName: pagos
+            columns:
+              - column: { name: venta_id, valueNumeric: 10 }
+              - column: { name: monto, valueNumeric: 39990 }
+              - column: { name: metodo_pago, value: "TRANSFERENCIA" }
+              - column: { name: estado, value: "APROBADO" }
+              - column: { name: fecha, valueDate: 2026-05-10T12:00:00 }
